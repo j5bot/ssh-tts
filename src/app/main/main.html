@@ -1,0 +1,32 @@
+<div class="container">
+
+  <div>
+    <acme-navbar creationDate="main.creationDate" />
+  </div>
+
+  <div class="jumbotron">
+    <h1></h1>
+    <p class="lead"></p>
+  </div>
+
+<textarea id="parsecast" rows=5 cols=80>
+Tyrion:Alex:0.9:0.3
+</textarea>
+
+<button ng-click="main.cast('parsecast')">CAST</button>
+
+<textarea id="parsetext" rows=20 cols=80>
+Tyrion:Listen son. I'll give you four cents each for them vanilla wafers
+</textarea>
+
+  <button ng-click="main.parse('parsetext')">READ</button>
+
+  <div>
+    <ol>
+      <li ng-repeat="voice in main.voices.map">
+        <button ng-click="main.speak(voice)">{{ voice.name }}</button>
+      </li>
+    </ol>
+  </div>
+
+</div>
